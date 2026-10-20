@@ -1,0 +1,31 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aloqa – PixelTech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+
+  <section class="contact-section">
+    <h2>Biz bilan bog‘laning</h2>
+    <form class="contact-form" onsubmit="contactSend(event)">
+      <input type="text" placeholder="Ismingiz" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Telefon raqam" required />
+      <textarea placeholder="Xabaringiz" required></textarea>
+      <button class="btn" type="submit">Yuborish</button>
+    </form>
+    <p id="result" class="result"></p>
+  </section>
+
+  <script>
+    function contactSend(e) {
+      e.preventDefault();
+      document.getElementById("result").innerText = "Xabaringiz yuborildi! Tez orada bog‘lanamiz.";
+    }
+  </script>
+</body>
